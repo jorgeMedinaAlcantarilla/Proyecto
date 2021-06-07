@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="810.0" prefWidth="1315.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConfiguracionController">
+    <stylesheets>
+        <URL value="@configuracion.css" />
+      <URL value="@../modelo/principal.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="panelPrincipal" stylesheets="@../modelo/principal.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="146.0" prefWidth="1305.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <Label text="Configuracion" textFill="#499664">
+                     <font>
+                        <Font name="Cambria Bold" size="83.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="287.0" layoutY="265.0" prefHeight="376.0" prefWidth="407.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#editorMesas" prefHeight="120.0" prefWidth="240.0" stylesheets="@../modelo/botonConf.css" text="Editor de mesas">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#editorProductos" prefHeight="120.0" prefWidth="240.0" stylesheets="@../modelo/botonConf.css" text="Productos">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onMouseClicked="#editarEmpresa" prefHeight="120.0" prefWidth="240.0" stylesheets="@../modelo/botonConf.css" text="Editar empresa">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" layoutX="307.0" layoutY="641.0" prefHeight="135.0" prefWidth="1295.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+               <children>
+                  <Button fx:id="salir" mnemonicParsing="false" onMouseClicked="#salir" prefHeight="120.0" prefWidth="120.0" stylesheets="@../modelo/botonBack.css">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="200.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="saliir" fitHeight="68.0" fitWidth="78.0" onMouseClicked="#salir" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

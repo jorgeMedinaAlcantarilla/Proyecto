@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.sombrayradius{
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0.0, 0.0 );
+    
+    -fx-background-radius: 5;
+    
+}
+.decoracionHbox{
+    -fx-background-color: #eee9ea;
+    -fx-background-radius: 20;
+     -fx-border-width: 2;
+     -fx-border-color:#1a1718;
+    -fx-border-radius: 15;
+    
+}
+
+

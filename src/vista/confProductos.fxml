@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="900.0" styleClass="panelPrincipal" stylesheets="@../modelo/principalConf.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConfProductosController">
+   <children>
+      <BorderPane layoutX="268.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../modelo/principalConf.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <left>
+            <VBox prefHeight="694.0" prefWidth="319.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="imagen" fitHeight="201.0" fitWidth="322.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnSelecionarImagen" mnemonicParsing="false" onMouseClicked="#seleccionarImagen" prefHeight="63.0" prefWidth="319.0" stylesheets="@../modelo/botonUpdate.css" text="             Imagen">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/seleccionar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label text="Nombre">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreProducto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label prefHeight="18.0" prefWidth="64.0" text="Precio">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="precioProducto">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Categoria">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="comboCategoriaCrear" prefHeight="26.0" prefWidth="175.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Button fx:id="btnAniadirCategoria" mnemonicParsing="false" onMouseClicked="#aniadirCategoria" prefHeight="14.0" prefWidth="145.0" stylesheets="@../modelo/botonAdd.css">
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/add.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnCrearProducto" mnemonicParsing="false" onMouseClicked="#crearProducto" prefHeight="86.0" prefWidth="319.0" stylesheets="@../modelo/botonAdd.css">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="123.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="142.0" prefWidth="581.0">
+                     <children>
+                        <Button fx:id="btnActu" mnemonicParsing="false" onMouseClicked="#actualizar" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonUpdate.css">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/update.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnBorrar" mnemonicParsing="false" onMouseClicked="#borrar" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonRemove.css">
+                           <HBox.margin>
+                              <Insets right="50.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/remove.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onMouseClicked="#salir" prefHeight="71.0" prefWidth="70.0" stylesheets="@../modelo/botonBack.css">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../iconos/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="594.0" prefWidth="581.0">
+                     <children>
+                        <TableView fx:id="tablaProductos" prefHeight="577.0" prefWidth="582.0" stylesheets="@../modelo/tableview4.css">
+                          <columns>
+                            <TableColumn fx:id="colNombre" prefWidth="195.1999815106392" text="Nombre" />
+                            <TableColumn fx:id="colPrecio" prefWidth="137.60003662109375" text="Precio" />
+                              <TableColumn fx:id="colCategoria" prefWidth="239.199951171875" text="Categoria" />
+                          </columns>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <styleClass>
+            <String fx:value="colorPrincipal" />
+            <String fx:value="sombrayradius" />
+         </styleClass>
+      </BorderPane>
+   </children>
+</AnchorPane>

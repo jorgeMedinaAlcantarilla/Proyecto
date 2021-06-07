@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    
+    -fx-background-color: #50EB64;
+    
+}
+
+.panelPrincipal{
+    -fx-background-color: #d2f0de;
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,1),10.0,0.0,0.0,10.0);
+   
+}
+.panelIzquierdo{
+    -fx-background-color: #C1C1C1;
+}
+.infoSuperior{
+    -fx-background-color: white;
+     -fx-border-width:1px;
+    -fx-border-color:solid;
+    -fx-border-color:#50EB64; 
+     -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,1),10.0,0.0,0.0,10.0);
+    
+    
+}
+.colorBotonBlanco{
+    -fx-background-color: white;
+}
+.colorBotonVerde{
+    -fx-background-color:#50EB64;
+}
+
+
+.infoCategorias{
+    -fx-background-color: #4AD580;
+    -fx-border-radius: 15px;
+}
+.escalabilidad{
+    -fx-font-size: 26px;
+}
+

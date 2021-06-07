@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.color1{
+    -fx-background-color: #E1FFE4;
+}
+.color2{
+    -fx-background-color: #50EB64;
+}
+.color3{
+    -fx-background-color:white;
+}
+.botonesNumeros{
+    
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    
+}
+.colorScroll{
+    -fx-background-color: #DCDCDC;
+}

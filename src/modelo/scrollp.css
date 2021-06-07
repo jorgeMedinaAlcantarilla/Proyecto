@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-jun-2021, 17:32:55
+    Author     : skatt
+*/
+
+.scroll-pane{
+    -fx-background-color: #d2f0de;
+    
+}
+.scroll-pane .scroll-bar:vertical{
+    -fx-background-color: #d2f0de;
+    -fx-background-radius: 0;
+}
+.scroll-pane .scroll-bar:hñ orizontal .track{
+    -fx-background-color: #d2f0de;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+.scroll-pane .scroll-bar:horizontal .decrement-button{
+    -fx-background-color: #d2f0de;
+    -fx-background-radius: 0em;
+}

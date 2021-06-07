@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="1223.0" styleClass="panelPrincipal" stylesheets="@../modelo/principalConf.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConfCategoriasController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../modelo/principalConf.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox prefHeight="354.0" prefWidth="756.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="318.0">
+               <children>
+                  <TableView fx:id="tablaCategoriaa" prefHeight="310.0" prefWidth="1279.0" stylesheets="@../modelo/tableview4.css">
+                    <columns>
+                      <TableColumn fx:id="colNombre" prefWidth="969.0" text="Nombre" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="170.0" prefWidth="756.0" AnchorPane.bottomAnchor="502.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="170.0" prefWidth="274.0">
+                     <children>
+                        <TextField fx:id="textoNombre" layoutX="96.0" layoutY="46.0" />
+                        <Label layoutX="18.0" layoutY="47.0" text="Nombre:">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="112.0" text="Color:">
+                           <font>
+                              <Font name="Cambria Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <ColorPicker fx:id="color" layoutX="96.0" layoutY="110.0" prefHeight="26.0" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="aniadir" mnemonicParsing="false" onMouseClicked="#aniadir" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonAdd.css">
+                     <HBox.margin>
+                        <Insets left="60.0" right="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="actualizar" mnemonicParsing="false" onMouseClicked="#actualizar" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonUpdate.css">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="eliminar" mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonRemove.css">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/remove.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="salirr" mnemonicParsing="false" onMouseClicked="#salir" prefHeight="60.0" prefWidth="60.0" stylesheets="@../modelo/botonBack.css">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../iconos/back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane fx:id="colorCategoria" layoutX="695.0" layoutY="161.0" prefHeight="131.0" prefWidth="219.0" styleClass="colorPanel" stylesheets="@confcategorias.css" />
+         </children>
+         <styleClass>
+            <String fx:value="colorPrincipal" />
+            <String fx:value="sombrayradius" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

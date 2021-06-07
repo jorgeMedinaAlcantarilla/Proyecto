@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vb" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#infoProductos" prefHeight="180.0" prefWidth="120.0" styleClass="color" stylesheets="@producto.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ProductoControlador">
+   <children>
+      <HBox alignment="CENTER" prefHeight="96.0" prefWidth="118.0">
+         <children>
+            <Label fx:id="nombree" prefHeight="18.0" prefWidth="54.0" text="Label">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Cambria Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="precioo" text="Label">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Cambria Bold" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="140.0" prefWidth="149.0">
+         <children>
+            <ImageView fx:id="imagee" fitHeight="75.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+        -fx-background-color: #50EB64;
+}
+.colorPrincipal{
+ -fx-background-color: #034AFF;
+}
+
+
+.panelPrincipal{
+    -fx-background-color: #d2f0de;
+    
+   
+}

@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02-jun-2021, 16:48:49
+    Author     : skatt
+*/
+
+.button{
+    -fx-background-color: #5ec9eb;
+    -fx-background-radius: 20;
+     -fx-border-width: 2;
+     -fx-border-color:#356688;
+    -fx-border-radius: 15;
+}
+
+.button:pressed{
+    -fx-background-color: #356688;
+    -fx-background-radius: 20;
+}

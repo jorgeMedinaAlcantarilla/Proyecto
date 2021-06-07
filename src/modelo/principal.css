@@ -1,0 +1,29 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+        -fx-background-color: #50EB64;
+}
+.colorPrincipal{
+ -fx-background-color: #034AFF;
+}
+
+
+.panelPrincipal{
+    -fx-background-color: #d2f0de;
+    
+   
+}
+.transparente{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.sombrayradius{
+    -fx-effect: dropshadow( gaussian, rgba(0, 0, 0, 0.7), 10, 0.5, 0.0, 0.0 );
+    
+    -fx-background-radius: 5;
+    
+}
+
+
+

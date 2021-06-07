@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.bordeh{
+   
+    -fx-background-color: #50EB64;
+    -fx-border-color: #50EB64;
+    -fx-border-radius: 20;
+   
+}
+.panelCentral{
+    -fx-background-color: #D7DED8;
+}

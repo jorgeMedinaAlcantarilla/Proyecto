@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.button{
+    -fx-background-color: #ed1e1e;
+    -fx-background-radius: 70;
+     -fx-border-width: 2;
+    -fx-border-color:#9d1e1e;
+    -fx-border-radius: 65;
+}
+
+.button:pressed{
+    -fx-background-color: #9d1e1e;
+    -fx-background-radius: 70;
+}
