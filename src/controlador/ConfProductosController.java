@@ -174,10 +174,7 @@ public class ConfProductosController implements Initializable {
           {
                FileInputStream fis = new FileInputStream(file);
          int len = (int) file.length();
-           /* String query = "INSERT INTO `producto` (`id`, `nombre`,`nombreCategoria`,`imagen`,`precio`) VALUES (NULL, '"+nombre+"','"+categoria+"',NULL,'"+precio+"')";
-            //String query = "INSERT INTO 'tipo_mesa' (nombre,descripcion) VALUES ('"+nombre+"','"+descripcion+"')";
-            executeQuery(query);
-            showTable();*/
+       
              
             Connection con = bd.getConnection();
             PreparedStatement ps = con.prepareStatement("INSERT INTO `producto` (`id`, `nombre`,`nombreCategoria`,`imagen`,`precio`) VALUES (NULL,?,?,?,?)");
@@ -252,7 +249,7 @@ public class ConfProductosController implements Initializable {
                 FileInputStream fis = new FileInputStream(file);
                     int len = (int) file.length();
               Connection con = bd.getConnection();
-            PreparedStatement ps = con.prepareStatement("UPDATE `producto` SET nombre = ?,nombreCategoria =?, imagen =?,precio=?  ");
+            PreparedStatement ps = con.prepareStatement("UPDATE `producto` SET nombre = ?,nombreCategoria =?, imagen =?,precio=?  where producto.id = '"+c.getId()+"'");
            
             ps.setString(1, cambio);
             ps.setString(2, categoria);

@@ -17,6 +17,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -80,7 +81,8 @@ public class TipoMesasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         bd=new bd();
-        
+          tablaListaMesa.setPlaceholder(new Label(""));
+            tablaTipoMesa.setPlaceholder(new Label(""));
         addTextLimiter(nombre,3);
         addListennerForTable();
         showTable();

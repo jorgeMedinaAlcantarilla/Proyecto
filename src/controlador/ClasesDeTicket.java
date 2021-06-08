@@ -73,6 +73,7 @@ public class ClasesDeTicket {
         SimpleDateFormat dd = new SimpleDateFormat("dd/MM/YYYY");
         SimpleDateFormat ddd = new SimpleDateFormat("HH:mm");
         
+        
          String aux="";
          
          String unidades="";

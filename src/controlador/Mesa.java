@@ -140,14 +140,14 @@ public class Mesa extends Button{
             @Override
             public void handle(MouseEvent event) {
 
-                // record the current mouse X and Y position on Node
+               
                 mousex = event.getSceneX();
                 mousey = event.getSceneY();
 
                 x = getLayoutX();
                 System.out.println(x);
                 System.out.println(nombre);
-                //System.out.println(nombre);
+               
                 y = getLayoutY();
 
                 if (isMoveToFront()) {
@@ -156,12 +156,12 @@ public class Mesa extends Button{
             }
         });
 
-        //Event Listener for MouseDragged
+        
         onMouseDraggedProperty().set(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
 
-                // Get the exact moved X and Y
+            
 
                 double offsetX = event.getSceneX() - mousex;
                 double offsetY = event.getSceneY() - mousey;

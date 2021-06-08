@@ -25,18 +25,6 @@
          </styleClass></AnchorPane>
       <HBox alignment="CENTER" layoutX="891.0" layoutY="693.0" prefHeight="122.0" prefWidth="918.0" stylesheets="@../modelo/planoMesas.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button mnemonicParsing="false" onMouseClicked="#eliminar" prefHeight="90.0" prefWidth="90.0" stylesheets="@../modelo/botonRemove.css">
-               <HBox.margin>
-                  <Insets right="50.0" />
-               </HBox.margin>
-               <graphic>
-                  <ImageView fitHeight="73.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../iconos/remove.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
             <Button mnemonicParsing="false" onMouseClicked="#aniadir" prefHeight="80.0" prefWidth="80.0">
                <HBox.margin>
                   <Insets right="50.0" />

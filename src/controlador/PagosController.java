@@ -19,6 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -91,6 +92,8 @@ public class PagosController implements Initializable {
     private Button cobrarr;
     private GestionMesasController controller;
     private String nombreMesa;
+    @FXML
+    private ImageView salir;
 
     /**
      * Initializes the controller class.
@@ -172,7 +175,7 @@ public class PagosController implements Initializable {
 
     @FXML
     private void btncoma(MouseEvent event) {
-        entregando.setText(".");
+        entregando.setText(entregando.getText()+".");
         mensajeError.setText("");
     }
 
@@ -395,6 +398,12 @@ public class PagosController implements Initializable {
     public void setController(GestionMesasController controller)
     {
         this.controller = controller;
+    }
+
+    @FXML
+    private void salir(MouseEvent event) {
+        Stage stage2 = (Stage) this.salir.getScene().getWindow();
+            stage2.close();
     }
     
     

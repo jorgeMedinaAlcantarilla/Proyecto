@@ -185,20 +185,7 @@ System.out.println(categoria.getColor());
             categoria.setLayoutX(spacing*(i+1) + categoria.getPrefWidth()*i);
             categoria.setLayoutY(20);
             categoria.setController(this);
-            //FXMLLoader loader = new FXMLLoader();
-            //loader.setLocation(getClass().getResource("/vista/producto.fxml"));
-            //VBox ap = loader.load(); 
-            
-            //ProductoControlador controlador = loader.getController();
-            //controlador.setData(listaTabla.get(i));
-            /*
-            if (column == 6)
-            {
-                column = 0;
-                row ++;
-            }
-            */
-            //grind.add(ap,column++, row);
+       
              p.getChildren().add(categoria);
             
             //GridPane.setMargin(categoria,new Insets(20));
@@ -360,7 +347,7 @@ System.out.println(categoria.getColor());
         {
              //String query = "DELETE FROM `cuentamesa` WHERE `cuentamesa`.`id` = '"+cm.getNombre()+"'";
              //String query1 = "DELETE FROM cuentamesa WHERE nombreProducto = '"+cm.getNombre()+"' LIMIT 1";
-             String query2 = "UPDATE cuentamesa SET  cantidad = cantidad -1,total = total - precioProducto WHERE cuentamesa.nombreProducto='"+cm.getNombre()+"'";
+             String query2 = "UPDATE cuentamesa SET  cantidad = cantidad -1,total = total - precioProducto WHERE cuentamesa.id='"+cm.getId()+"'";
 
             executeQuery(query2);
             showTable();
@@ -392,7 +379,7 @@ System.out.println(categoria.getColor());
          
         this.listaTablaCuenta = FXCollections.observableArrayList();
         Connection con = bd.getConnection();
-        String query = "SELECT * FROM cuentaMesa where cuentaMesa.nombreMesa = '"+nombreMesa+"' and cuentaMesa.idFactura= '"+0+"'";
+        String query = "SELECT * FROM cuentaMesa where cuentaMesa.nombreMesa = '"+nombreMesa+"' and cuentaMesa.idFactura IS NULL";
         System.out.println("kkuuuuggggkk"+nombreMesa);
         String query1 = "SELECT * FROM cuentaMesa";
         
@@ -570,7 +557,7 @@ System.out.println(categoria.getColor());
                 
       
        
-            String query1 ="UPDATE cuentamesa SET total = (cantidad+1) * precioProducto , cantidad = cantidad +1 WHERE cuentamesa.nombreProducto='"+nombre+"'and cuentamesa.nombreMesa='"+this.nombreMesa+"'";
+            String query1 ="UPDATE cuentamesa SET total = (cantidad+1) * precioProducto , cantidad = cantidad +1 WHERE cuentamesa.nombreProducto='"+nombre+"'and cuentamesa.id='"+aux.getId()+"'";
             //String query = "INSERT INTO 'tipo_mesa' (nombre,descripcion) VALUES ('"+nombre+"','"+descripcion+"')";
             executeQuery(query1);
             showTable();
@@ -650,7 +637,7 @@ System.out.println(categoria.getColor());
               }
               else
               {
-                  String query2 = "DELETE FROM `cuentamesa` WHERE `cuentamesa`.`id` = '"+cuentaMesa.getId()+"' and `cuentamesa`.`idfactura`=0 and `cuentamesa`.`nombremesa`='"+this.nombreMesa+"'";
+                  String query2 = "DELETE FROM `cuentamesa` WHERE `cuentamesa`.`id` = '"+cuentaMesa.getId()+"' and `cuentamesa`.`idfactura` IS NULL and `cuentamesa`.`nombremesa`='"+this.nombreMesa+"'";
                   executeQuery(query2);
                   System.out.println("BORRANDO: "+cuentaMesa.getId());
                   
@@ -762,7 +749,7 @@ System.out.println(categoria.getColor());
     private void atras(MouseEvent event) {
            if(!this.listaTablaCuenta.isEmpty())  
        { 
-            System.out.println("NO ES NULLLLLLLLL");
+           
            int estado =0;
              String query = "SELECT estado FROM mesa where nombre = '"+nombreMesa+"'";
              System.out.println("nombre de la mesa"+ nombreMesa);
@@ -834,7 +821,10 @@ public void getPM(PlanoMesasController pmc)
             controlador.setController(this);
             Scene scene = new Scene (root);
             Stage stage = new Stage();
+             stage.initStyle( StageStyle.TRANSPARENT );
             stage.initModality(Modality.APPLICATION_MODAL);
+            scene.getStylesheets().add(getClass().getResource("/modelo/panelDiseño.css").toString());
+            scene.setFill(Color.TRANSPARENT);
             stage.setScene(scene);
             //stage.setMaximized(true);
             stage.show();

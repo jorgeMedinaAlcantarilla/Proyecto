@@ -155,7 +155,7 @@
                   </Button>
                   <Button mnemonicParsing="false" prefHeight="51.0" prefWidth="54.0" stylesheets="@../modelo/botonBack.css">
                      <graphic>
-                        <ImageView fitHeight="76.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="salir" fitHeight="76.0" fitWidth="33.0" onMouseClicked="#salir" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../iconos/back.png" />
                            </image>

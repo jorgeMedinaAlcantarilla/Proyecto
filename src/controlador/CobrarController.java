@@ -286,6 +286,7 @@ public class CobrarController implements Initializable {
         
         int llave=0;
          double truncate = +this.efectivo+this.tarjeta;
+          SimpleDateFormat ddd1 = new SimpleDateFormat("yyyy-MM-dd H:mm:ss");
                 
          String query = "INSERT INTO `factura` (`id`,`efectivo`,`tarjeta`,`total`,`hora`,`fecha`,`idCierreCaja`,`entregado`,cancelado) VALUES (NULL,'"+this.efectivo+"','"+this.tarjeta+"','"+cantidadTotal+"', '"+ddd.format(gg.getTime())+"','"+date1+"','"+numCaja+"','"+this.entregadoo+"',0)";
             //String query = "INSERT INTO 'tipo_mesa' (nombre,descripcion) VALUES ('"+nombre+"','"+descripcion+"')";
